@@ -67,7 +67,7 @@ Training process:
 
 Run Do_train.cmd to train CNN.
 The parameters can be changed at ~/train/2_train/parameter.list
-Training dataset of paper is at ~/train/1_data
+Training dataset of paper is at ~/train/1_data.zip. Unzip to use it.
 
 ---------------------------------------------------
 
@@ -76,7 +76,7 @@ Testing process:
 
 Run Do_load.cmd to run CNN.
 The parameters can be changed at ~/load/2_load/parameter.list
-Testing dataset of paper is at ~/load/1_data
+Testing dataset of paper is at ~/load/1_data.zip. Unzip to use it.
 CNN model of paper is at ~/train/2_train/2_train/CNN_XKS.h5
 Output is at ~/load/2_load/Outp
         The output of each event contain 2 numbers.
