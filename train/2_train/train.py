@@ -68,7 +68,7 @@ for k in range(3):
                     nst = vals[0]      #station name
                     nev = vals[1]      #event name
 
-                    if vals[13] == 'A' or vals[13] == 'B':
+                    if vals[2] == 'A' or vals[2] == 'B':
                         y.append(1)  #label of acceptable measurements
                         y.append(0)
                     else:
