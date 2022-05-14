@@ -1,2 +1,2 @@
-../1_data/                                    #rout of input data
-../../train/2_train/CNN_XKS.h5                #rout of load model
+../1_data/                            #rout of input data
+../../model/CNN_XKS.h5                #rout of load model
