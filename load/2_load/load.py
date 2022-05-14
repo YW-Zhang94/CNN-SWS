@@ -21,7 +21,7 @@ count_line = 0
 
 X = [] 
 Y = []
-X_nst, Y_nev, Z_pro = [], [], []
+X_nst, Y_nev = [], []
 
 input_length=1000
 
@@ -52,7 +52,7 @@ for k in range(3):
                     nst = vals[0]      #station name
                     nev = vals[1]      #event name
 
-                    if vals[13] == 'A' or vals[13] == 'B':
+                    if vals[2] == 'A' or vals[2] == 'B':
                         y.append(1)
                         y.append(0)
                     else:
@@ -62,7 +62,7 @@ for k in range(3):
                     ncom=['.ro','.to','.rl','.tl']
                     for i in range(4):
                         rtol=[]
-                        ro_rout=nrt+str(XKS[k])+'Out/'+str(P_rout[21:26])+'/'+nst+'/'+nev+'/'+nst+str(ncom[i])
+                        ro_rout=nrt+str(XKS[k])+'Out/'+nst+'/'+nev+'/'+nst+str(ncom[i])
 
                         st=read(ro_rout)
                         if i==0: ro=st[0].data
@@ -77,7 +77,6 @@ for k in range(3):
                     Y.append(np.array(y))
                     X_nst.append(np.array(nst+'_'+str(XKS[k])+'_'))
                     Y_nev.append(np.array(nev))
-                    Z_pro.append(np.array(P_rout[21:26]))
 
             print(np.array(X).shape)
 
@@ -152,13 +151,12 @@ model.load_weights(nmodel)
 result = model.predict(np.array(X))
 
 
-###write result. named as xxxxxx_II_XKS_NC12l_EQxxxxxxx.res
+###write result. named as xxxxxx_II_XKS_EQxxxxxxx.res
 for i in range(len(result)):
         nst=X_nst[i]
         nev=Y_nev[i]
-        pro=Z_pro[i]
-        res_name='Outp/'+str(nst)+str(pro)+'_'+str(nev)+'.res'
-        y_name='Outp/'+str(nst)+str(pro)+'_'+str(nev)+'.y'
+        res_name='Outp/'+str(nst)+'_'+str(nev)+'.res'
+        y_name='Outp/'+str(nst)+'_'+str(nev)+'.y'
         np.savetxt(res_name,result[i])
         np.savetxt(y_name,Y[i])
 
