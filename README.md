@@ -67,7 +67,9 @@ Training process:
 
 Run Do_train.cmd to train CNN.
 The parameters can be changed at ~/train/2_train/parameter.list
-Training dataset of paper is at ~/train/1_data.zip. Unzip to use it.
+Link of training dataset in paper: https://web.mst.edu/~yzcd4/21a_CNN_SWS_data/1_data_train.zip
+        Download under ~/train/ 
+        Unzip to use it.
 
 ---------------------------------------------------
 
@@ -76,11 +78,13 @@ Testing process:
 
 Run Do_load.cmd to run CNN.
 The parameters can be changed at ~/load/2_load/parameter.list
-Testing dataset of paper is at ~/load/1_data.zip. Unzip to use it.
 CNN model of paper is at ~/train/2_train/2_train/CNN_XKS.h5
 Output is at ~/load/2_load/Outp
         The output of each event contain 2 numbers.
         The first one represents the possibility of accepeted measurement.
         The seconded one represents the possibility of unaccepeted measurement.
+Link of testing dataset in paper: https://web.mst.edu/~yzcd4/21a_CNN_SWS_data/1_data_load.zip
+        Download under ~/load/
+        Unzip to use it.
 
 --------------------------------------------------
