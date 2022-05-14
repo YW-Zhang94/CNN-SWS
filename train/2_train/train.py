@@ -28,9 +28,8 @@ X_rand, Y_rand = [], []
 ###save name of station, number of event and project name
 nst_good, nev_good = [], []
 nst_bad, nev_bad = [], []
-pro_good, pro_bad = [], []
-X_nst, Y_nev, Z_pro = [], [], []
-nst_rand, nev_rand, pro_rand = [], [], []
+X_nst, Y_nev = [], []
+nst_rand, nev_rand = [], []
 
 
 ### read parameters
@@ -79,7 +78,7 @@ for k in range(3):
                     ncom=['.ro','.to','.rl','.tl']
                     for i in range(4):
                         rtol=[]
-                        ro_rout=nrt+str(XKS[k])+'Out/'+str(P_rout[21:26])+'/'+nst+'/'+nev+'/'+nst+str(ncom[i])
+                        ro_rout=nrt+str(XKS[k])+'Out/'+nst+'/'+nev+'/'+nst+str(ncom[i])
                             
                         st=read(ro_rout)
                         if i==0: ro=st[0].data
@@ -94,13 +93,11 @@ for k in range(3):
                         Y_good.append(np.array(y))
                         nst_good.append(np.array(nst+'_'+str(XKS[k])+'_'))
                         nev_good.append(np.array(nev))
-                        pro_good.append(np.array(P_rout[21:26]))
                     else:
                         X_bad.append(np.array(PKS))
                         Y_bad.append(np.array(y))
                         nst_bad.append(np.array(nst+'_'+str(XKS[k])+'_'))
                         nev_bad.append(np.array(nev))
-                        pro_bad.append(np.array(P_rout[21:26]))
                             
             print('Accepted: ', np.array(X_good).shape, np.array(Y_good).shape)
             print('Unaccepted: ', np.array(X_bad).shape, np.array(Y_bad).shape)
@@ -125,7 +122,6 @@ for i in range(npts):
                 Y.append(np.array(Y_good[ii]))
                 X_nst.append(np.array(nst_good[ii]))
                 Y_nev.append(np.array(nev_good[ii]))
-                Z_pro.append(np.array(pro_good[ii]))
 
 #store bad measurement
 for i in range(int(len(X_bad))):
@@ -133,7 +129,6 @@ for i in range(int(len(X_bad))):
         Y.append(np.array(Y_bad[i]))
         X_nst.append(np.array(nst_bad[i]))
         Y_nev.append(np.array(nev_bad[i]))
-        Z_pro.append(np.array(pro_bad[ii]))
 
 ###random data set
 rann0 = random.sample(range(len(X)),len(X))
@@ -144,7 +139,6 @@ for i in range(len(X)):
         Y_rand.append(np.array(Y[rann0[rann1[rann2[i]]]]))
         nst_rand.append(np.array(X_nst[rann0[rann1[rann2[i]]]]))
         nev_rand.append(np.array(Y_nev[rann0[rann1[rann2[i]]]]))
-        pro_rand.append(np.array(Z_pro[rann0[rann1[rann2[i]]]]))
 
 print("data set shape:",np.array(X_rand).shape,np.array(Y_rand).shape)
 print(np.array(nst_rand).shape, np.array(nev_rand).shape)
