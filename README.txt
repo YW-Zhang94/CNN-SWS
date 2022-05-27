@@ -67,7 +67,7 @@ Training process:
 
 Run Do_train.cmd to train CNN.
 The parameters can be changed at ~/train/2_train/parameter.list
-Link of training dataset in paper: https://web.mst.edu/~yzcd4/21a_CNN_SWS_data/1_data_train.zip
+Link of training dataset in paper: https://figshare.com/articles/dataset/CNN_SWS_data/19904833
         Download under ~/train/ 
         Unzip to use it.
 
@@ -83,7 +83,7 @@ Output is at ~/load/2_load/Outp
         The output of each event contain 2 numbers.
         The first one represents the possibility of accepeted measurement.
         The seconded one represents the possibility of unaccepeted measurement.
-Link of testing dataset in paper: https://web.mst.edu/~yzcd4/21a_CNN_SWS_data/1_data_load.zip
+Link of testing dataset in paper: https://figshare.com/articles/dataset/CNN_SWS_data/19904833
         Download under ~/load/
         Unzip to use it.
 
