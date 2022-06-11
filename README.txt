@@ -12,7 +12,7 @@ Versions:
 **Please report confusions/errors to yzcd4@umsystem.edu or sgao@mst.edu
 
 The technique is decribed in the paper: 
-        Zhang, Y.* & Gao, S.S. (2022). Classification of teleseismic shear wave splitting measurements: A convolutional neural network approach. Geophysical Research Letters, 49, e2022GL097101. https://doi.org/10.1029/2022GL097101
+        Zhang, Y.* & Gao, S.S. (2022). Classification of teleseismic shear wave splitting measurements: A convolutional neural network approach. Geophysical Research Letters, 49, e2022GL097101. https://doi.org/10.1029/2021GL097101
 
 
 ------------------------------------------------
