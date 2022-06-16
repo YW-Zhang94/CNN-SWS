@@ -1,7 +1,7 @@
 # CNN-SWS
 
 
-CNN-based Auto-picking method for Shear-wave spitting (SWS) measurements
+CNN-based Auto-classification method for Shear-wave spitting (SWS) measurements
 
 Versions:
         python 3.6.9
