@@ -60,6 +60,10 @@ The list of event must be at ~/{data_path}/Out_Bin/XKS.out
                 The First one is stname_NW.
                 The second one is EQ123456789.
                 The third one is quailty of measurements. A and B are accepted measurements, others are unaccepted measurements （For training process).
+                
+                
+~/{data_path}/XKS.list contain all the XKS.out in ~/{data_path}/Out_Bin
+        Out_Bin/XKS.out
 
 
 --------------------------------------------------
